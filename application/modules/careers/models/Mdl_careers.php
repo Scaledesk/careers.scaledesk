@@ -148,24 +148,32 @@ class Mdl_careers extends CI_model
         }
     }
     /*$data['users_name'], $data['exp_years'], $data['exp_months'], $data['working'], $data['company_name'*/
-    public  function jobsApply($file){
+    public  function jobsApply(){
         $data=[
             'jobs_apply_users_name'=>$this->users_name,
             'jobs_apply_experience_years'=>$this->experience_years,
             'jobs_apply_experience_months'=>$this->experience_months,
             'jobs_apply_company_name'=>$this->company_name,
             'jobs_apply_working'=>$this->working,
-            'jobs_post_id'=>$this->jobs_post_id,
-            'jobs_post_upload_file'=>$file
-
+            'jobs_post_id'=>$this->jobs_post_id
         ];
 
         if($this->db->insert('jobs_apply',$data)){
-            return true;
+            return  $insert_id = $this->db->insert_id();
         }else{
             return false;
         }
 
+    }
+    public function jobsApplyStep2($file){
+        $data=[
+            'jobs_post_upload_file'=>$file,
+        ];
+        if($this->db->where('jobs_apply_id',$this->session->userdata['jobapplyid']['jobapplyid'])->update('jobs_apply',$data)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
