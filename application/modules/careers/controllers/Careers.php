@@ -93,7 +93,7 @@ class Careers extends MX_Controller
                      $error = array('error' => $ci->upload->display_errors());
                      setInformUser('error', $error['error'] . ' please import  file format only');
                      redirect(base_url('careers/jobApply'));
-                 } else {
+                 }else {
                      $data = array('upload_data' => $ci->upload->data());
 
                      $file = $data['upload_data']['file_name'];
