@@ -147,7 +147,7 @@ class Mdl_careers extends CI_model
                 break;
         }
     }
-    /*$data['users_name'], $data['exp_years'], $data['exp_months'], $data['working'], $data['company_name'*/
+/*$data['users_name'], $data['exp_years'], $data['exp_months'], $data['working'], $data['company_name'*/
     public  function jobsApply($file){
         $data=[
             'jobs_apply_users_name'=>$this->users_name,

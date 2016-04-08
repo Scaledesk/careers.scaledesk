@@ -23,8 +23,6 @@
     <script src="<?php echo asset_url(); ?>js/vendor/modernizr-2.8.3.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
- <!--   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -68,51 +66,4 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
-<script type="text/javascript">
-    setTimeout(function() {
-        $('#notification1').fadeOut('fast');
-    }, 3500);
-
-</script>
-
-<script type="text/javascript">
-    setTimeout(function() {
-        $('#notification').fadeOut('fast');
-    }, 3500);
-</script>
-
-<?php
-
-
-
-$logout=$this->input->get('logout');
-if($logout){
-    ?>
-    <div class="notification" id="notification1">
-
-        <h3> You are successfully logged out.</h3>
-    </div>
-
-
-    <?php
-
-}else if (getInformUser()){
-    ?>
-    <div class="notification" id="notification" >
-        <?php  if(islogin()){if  ($this->session->userdata['login_first']==1) {
-
-            $this->session->set_userdata('login_first',0);
-
-            ?><h3>Welcome User</h3>
-
-        <?php }} ?>
-        <p>   <?php  echo getInformUser(); ?> </p>
-    </div>
-
-
-    <?php
-}
-?>
-
 

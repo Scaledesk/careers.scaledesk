@@ -18,11 +18,11 @@
             <option value="4">Japanese</option>
             <option value="2">Italian</option>
         </select>-->
-        <input type="text" name="users_name" placeholder="You Name"> <!--data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"-->
+        <input type="text" name="name" placeholder="You Name"> <!--data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"-->
         <br /> i have
 
 
-        <select name="exp_years">
+        <select name="years">
             <option value="0" selected>0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -37,7 +37,7 @@
 
 
         </select>  Years
-        <select name="exp_months">
+        <select name="months">
             <option value="0" selected>0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -70,7 +70,7 @@
              <option value="4">traditional</option>
              <option value="2">romantic</option>
          </select>-->
-      <!-- <input  type="file" name="filename" placeholder="cv">-->
+       <input id="file_input" type="file" name="filename" placeholder="CV">
         <div class="nl-submit-wrap">
             <button class="nl-submit" type="submit">Apply Now</button>
         </div>
@@ -85,7 +85,6 @@
 
 </script>-->
 </form>
-
 
 
 <!--
